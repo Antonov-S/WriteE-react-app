@@ -1,34 +1,32 @@
 import React, { useEffect, useState } from "react";
-import { useParams, Link } from "react-router-dom";
 import Axios from "axios";
+import { useParams, Link } from "react-router-dom";
 
-function ProfilePosts() {
+function ProfilePosts(props) {
+  const { username } = useParams();
   const [isLoading, setIsLoading] = useState(true);
   const [posts, setPosts] = useState([]);
-  const { username } = useParams();
 
   useEffect(() => {
-    async function fetchPostes() {
+    async function fetchPosts() {
       try {
         const response = await Axios.get(`/profile/${username}/posts`);
         setPosts(response.data);
         setIsLoading(false);
       } catch (e) {
-        console.log("There was a problem!");
+        console.log("There was a problem.");
       }
     }
-    fetchPostes();
+    fetchPosts();
   }, []);
 
-  if (isLoading) {
-    return <div>Loading...</div>;
-  }
+  if (isLoading) return <div>Loading...</div>;
 
   return (
     <div className="list-group">
       {posts.map(post => {
         const date = new Date(post.createdDate);
-        const dateFormatted = `${date.getDate()}/${date.getMonth() + 1}/${date.getFullYear()}`;
+        const dateFormatted = `${date.getMonth() + 1}/${date.getDate()}/${date.getFullYear()}`;
 
         return (
           <Link key={post._id} to={`/post/${post._id}`} className="list-group-item list-group-item-action">

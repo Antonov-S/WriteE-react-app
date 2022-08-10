@@ -1,8 +1,7 @@
 import React, { useEffect, useContext, useState } from "react";
+import Page from "./Page";
 import { useParams } from "react-router-dom";
 import Axios from "axios";
-
-import Page from "./Page";
 import StateContext from "../StateContext";
 import ProfilePosts from "./ProfilePosts";
 
@@ -13,11 +12,7 @@ function Profile() {
     profileUsername: "...",
     profileAvatar: "https://gravatar.com/avatar/placeholder?s=128",
     isFollowing: false,
-    counts: {
-      postCount: "",
-      followerCount: "",
-      followingCount: ""
-    }
+    counts: { postCount: "", followerCount: "", followingCount: "" }
   });
 
   useEffect(() => {
@@ -26,7 +21,7 @@ function Profile() {
         const response = await Axios.post(`/profile/${username}`, { token: appState.user.token });
         setProfileData(response.data);
       } catch (e) {
-        console.log("There was a problem!");
+        console.log("There was a problem.");
       }
     }
     fetchData();

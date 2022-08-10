@@ -1,6 +1,5 @@
-import React, { useState, useContext } from "react";
+import React, { useEffect, useState, useContext } from "react";
 import Axios from "axios";
-
 import DispatchContext from "../DispatchContext";
 
 function HeaderLoggedOut(props) {
@@ -15,10 +14,10 @@ function HeaderLoggedOut(props) {
       if (response.data) {
         appDispatch({ type: "login", data: response.data });
       } else {
-        console.log("Incorect username / password!");
+        console.log("Incorrect username / password.");
       }
     } catch (e) {
-      console.log("There was a problem!");
+      console.log("There was a problem.");
     }
   }
 

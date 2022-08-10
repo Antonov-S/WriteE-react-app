@@ -1,7 +1,6 @@
 import React, { useState } from "react";
-import Axios from "axios";
-
 import Page from "./Page";
+import Axios from "axios";
 
 function HomeGuest() {
   const [username, setUsername] = useState();
@@ -12,14 +11,14 @@ function HomeGuest() {
     e.preventDefault();
     try {
       await Axios.post("/register", { username, email, password });
-      console.log("User is Created");
+      console.log("User was successfully created.");
     } catch (e) {
-      console.log("There was a error!");
+      console.log("There was an error.");
     }
   }
 
   return (
-    <Page title="Wellcome!" wide={true}>
+    <Page title="Welcome!" wide={true}>
       <div className="row align-items-center">
         <div className="col-lg-7 py-3 py-md-5">
           <h1 className="display-3">Remember Writing?</h1>

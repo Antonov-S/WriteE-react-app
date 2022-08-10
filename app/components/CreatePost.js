@@ -1,12 +1,11 @@
-import React, { useState, useContext } from "react";
+import React, { useEffect, useState, useContext } from "react";
 import { useNavigate } from "react-router-dom";
-import Axios from "axios";
-
 import Page from "./Page";
+import Axios from "axios";
 import DispatchContext from "../DispatchContext";
 import StateContext from "../StateContext";
 
-function CreatePost() {
+function CreatePost(props) {
   const [title, setTitle] = useState();
   const [body, setBody] = useState();
   const navigate = useNavigate();
@@ -20,9 +19,9 @@ function CreatePost() {
       // Redirect to new post url
       appDispatch({ type: "flashMessage", value: "Congrats, you created a new post." });
       navigate(`/post/${response.data}`);
-      console.log("New post was created!");
+      console.log("New post was created.");
     } catch (e) {
-      console.log("There was a problem!");
+      console.log("There was a problem.");
     }
   }
 
