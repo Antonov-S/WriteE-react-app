@@ -20,7 +20,7 @@ function Footer() {
       <p className="m-0">
         Copyright &copy; 2022{" "}
         <a href="/" className="text-muted">
-          ComplexApp
+          WriteE
         </a>
         . All rights reserved.
       </p>
