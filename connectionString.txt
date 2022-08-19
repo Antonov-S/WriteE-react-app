@@ -1,3 +1,0 @@
-mongodb+srv://mainUser:ieuz5T1hcWAlHNZO@cluster0.wfn9ocv.mongodb.net/?retryWrites=true&w=majority
-
-JWTSECRET
