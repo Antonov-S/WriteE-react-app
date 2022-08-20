@@ -1,8 +1,9 @@
-import React, { useEffect, useState, useContext } from "react";
-import Page from "./Page";
+import React, { useEffect, useContext } from "react";
 import Axios from "axios";
 import { useImmerReducer } from "use-immer";
 import { CSSTransition } from "react-transition-group";
+
+import Page from "./Page";
 import DispatchContext from "../DispatchContext";
 
 function HomeGuest() {

@@ -1,10 +1,10 @@
 import React, { useEffect, useContext } from "react";
-import { Link } from "react-router-dom";
-import Page from "./Page";
-import StateContext from "../StateContext";
 import { useImmer } from "use-immer";
-import LoadingDotsIcon from "./LoadingDotsIcon";
 import Axios from "axios";
+
+import StateContext from "../StateContext";
+import LoadingDotsIcon from "./LoadingDotsIcon";
+import Page from "./Page";
 import Post from "./Post";
 
 function Home() {

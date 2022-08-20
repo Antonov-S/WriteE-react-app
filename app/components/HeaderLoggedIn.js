@@ -1,8 +1,9 @@
-import React, { useEffect, useContext } from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
+import ReactTooltip from "react-tooltip";
+
 import DispatchContext from "../DispatchContext";
 import StateContext from "../StateContext";
-import ReactTooltip from "react-tooltip";
 
 function HeaderLoggedIn(props) {
   const appDispatch = useContext(DispatchContext);

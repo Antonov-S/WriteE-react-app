@@ -1,9 +1,10 @@
 import React, { useEffect, useContext, useRef } from "react";
-import StateContext from "../StateContext";
-import DispatchContext from "../DispatchContext";
+import { Link } from "react-router-dom";
 import { useImmer } from "use-immer";
 import io from "socket.io-client";
-import { Link } from "react-router-dom";
+
+import StateContext from "../StateContext";
+import DispatchContext from "../DispatchContext";
 
 function Chat() {
   const socket = useRef(null);

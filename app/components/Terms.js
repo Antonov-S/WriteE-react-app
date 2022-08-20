@@ -11,7 +11,7 @@ function Terms() {
       <h3>Before you scroll, read this... Privacy Policy</h3>
       <p>It’s really hard to make everyone happy with a Privacy Policy. Most people who use WriteE want something short and easy to understand. While we wish we could fit everything you need to know into a Post, our regulators ask us to meet our legal obligations by describing them all in a lot of detail.</p>
       <p>With that in mind, we’ve written our Privacy Policy as simply as possible to empower you to make informed decisions when you use WriteE by making sure you understand and have control over the information we collect and how it’s used.</p>
-      <p>So if you skip reading every word of the Privacy Policy, at least know this: WriteE is a public platform and We collect some data about you</p>
+      <p>So if you skip reading every word of the Privacy Policy, at least know this: WriteE is a public platform and We collect some data about you.</p>
     </Page>
   );
 }

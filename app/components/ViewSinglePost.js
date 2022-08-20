@@ -1,10 +1,11 @@
 import React, { useContext, useEffect, useState } from "react";
-import Page from "./Page";
-import LoadingDotsIcon from "./LoadingDotsIcon";
 import { useParams, Link, useNavigate } from "react-router-dom";
 import Axios from "axios";
 import ReactMarkdown from "react-markdown";
 import ReactTooltip from "react-tooltip";
+
+import LoadingDotsIcon from "./LoadingDotsIcon";
+import Page from "./Page";
 import NotFound from "./NotFound";
 import StateContext from "../StateContext";
 import DispatchContext from "../DispatchContext";
